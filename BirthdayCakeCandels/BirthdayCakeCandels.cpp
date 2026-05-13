@@ -48,7 +48,6 @@ int birthdayCakeCandles2(int n, int arr[],int max = -1)
 
 
 
-
 int main()
 {
 	list<int> candles = {1,5,4,4,3,5,4};
