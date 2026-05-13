@@ -31,31 +31,46 @@ int birthdayCakeCandles1(int n, int candles[])
 }
 
 
+int maxElement(int n , int arr[])
+{
+	int max = INT_MIN;
+
+		for (int i = 0; i < n; i++)
+		{
+			if (max < arr[i])
+			{
+				max = arr[i];
+			}
+		}
+
+	return max;
+}
 
 int birthdayCakeCandles2(int n, int arr[],int max = -1)
-{	
+{
 	if (max == -1)
 	{
-		max = *max_element(arr, arr + n);
+		max = maxElement(n,arr);
 	}
 	if (n <=0)
 	{
 		return 0;
 	}
+
 	return arr[n-1] == max ? 1 + birthdayCakeCandles2(n - 1, arr, max) : birthdayCakeCandles2(n - 1, arr, max);
-	
+
 }
 
 
+//main function
 
 int main()
 {
-	list<int> candles = {1,5,4,4,3,5,4};
-	int arr[] = { 1,1,2,3,3 };
-	
-	int n= candles.size();
-	
-	int result = birthdayCakeCandles1(sizeof(arr)/sizeof(int), arr);
+	int candles[] = { 3,1,2,3,3 };
+
+	int n = sizeof(candles)/sizeof(int);
+
+	int result = birthdayCakeCandles1(n, candles);
 	cout <<"\nThe child will be able to blow "<< result << " Candles" << endl;
 	return 0;
 }
