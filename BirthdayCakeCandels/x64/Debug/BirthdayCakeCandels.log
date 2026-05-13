@@ -1,0 +1,3 @@
+﻿  BirthdayCakeCandels.cpp
+C:\Users\boody\source\repos\BirthdayCakeCandels\BirthdayCakeCandels\BirthdayCakeCandels.cpp(57,7): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  BirthdayCakeCandels.vcxproj -> C:\Users\boody\source\repos\BirthdayCakeCandels\x64\Debug\BirthdayCakeCandels.exe
