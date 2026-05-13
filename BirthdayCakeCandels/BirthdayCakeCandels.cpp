@@ -32,7 +32,7 @@ int birthdayCakeCandles1(int n, int candles[])
 
 
 
-int birthdayCakeCandles3(int n, int arr[],int max = -1)
+int birthdayCakeCandles2(int n, int arr[],int max = -1)
 {	
 	if (max == -1)
 	{
@@ -42,7 +42,7 @@ int birthdayCakeCandles3(int n, int arr[],int max = -1)
 	{
 		return 0;
 	}
-	return arr[n-1] == max ? 1 + birthdayCakeCandles3(n - 1, arr, max) : birthdayCakeCandles3(n - 1, arr, max);
+	return arr[n-1] == max ? 1 + birthdayCakeCandles2(n - 1, arr, max) : birthdayCakeCandles2(n - 1, arr, max);
 	
 }
 
