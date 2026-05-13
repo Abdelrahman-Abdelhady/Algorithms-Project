@@ -131,10 +131,16 @@ int birthdayCakeCandles3( int size,int candles[]) {
 
 int main()
 {
-	int candles[] = { 3,1,2,3,3 };
 
-	int n = sizeof(candles)/sizeof(int);
-
+	int n ;
+	cout<<"Enter the Age of the Child :"<<endl;
+	cin>>n;
+	int *candles = (int *)malloc(n * sizeof(int));
+	for (int i = 0; i < n ; i++)
+	{
+		cout<<"Enter the height of the candle "<<i+1<<" :"<<endl;
+		cin>>candles[i];
+	}
 	int result = birthdayCakeCandles1(n, candles);
 	cout <<"\nThe child will be able to blow "<< result << " Candles" << endl;
 	return 0;
